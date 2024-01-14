@@ -13,7 +13,8 @@
     --primary-color: hsla(252, 96%, 67%, 1);
     --secondary-color: hsla(213, 46%, 84%, 1);
     --accent-color: #131216;
-    --max-width: 1440px;
+    --max-width: 1920px;
+    --max-height: 1080px;
 }
 
 body
@@ -77,6 +78,11 @@ body
     width: 100%;
 }
 
+.location
+{
+    width: 100%;
+}
+
 .container
 {
     max-width: var(--max-width);
@@ -90,7 +96,7 @@ body
     top: 0;
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.16);
-    background: hsla(255, 10%, 8%, 0.9);
+    background: var(--accent-color);
     backdrop-filter: blur(20px);
     z-index: 1;
 }
@@ -135,7 +141,7 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 500;
@@ -156,6 +162,7 @@ body
     line-height: 150%;
     letter-spacing: -0.12px;
     transition: all 0.2s ease-in;
+    padding-left: 85px;
 }
 
 .nav-links
@@ -217,7 +224,7 @@ body
     letter-spacing: -0.12px;
 }
 
-.login-btn
+.log-in-btn
 {
     display: flex;
     padding: 4px 16px;
@@ -231,19 +238,25 @@ body
 
 .sign-up-btn
 {
-    background-color: var(--primary-color);
+    display: flex;
+    padding: 4px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 999px;
+    border: 2px solid var(--primary-color);
     transition: all 0.2s ease-in;
 }
 
-.login-btn:hover
+.log-in-btn:hover
 {
-    border: 2px solid hsl(252, 70%, 57%);
+    background-color: var(--primary-color);
     transition: all 0.2s ease-in;
 }
 
 .sign-up-btn:hover
 {
-    background-color: hsl(252, 70%, 57%);
+    background-color: var(--primary-color);
     transition: all 0.2s ease-in;
 }
 
@@ -251,7 +264,7 @@ body
 {
     width: 100%;
     padding: 120px 0;
-    background: url("./Pictures/bg.svg");
+    background: url("./images/bg.svg");
     background-position: center;
     background-position-y: 10;
     z-index: -2;
@@ -264,7 +277,7 @@ body
     justify-content: center;
     width: 100%;
     padding: 80px 0;
-    background: url("./Pictures/bg.svg");
+    background: url("./images/bg.svg");
     background-position: center;
     background-position-y: 10;
     z-index: -2;
@@ -363,7 +376,7 @@ body
 
 .search-btn:hover
 {
-    background-color: hsl(252, 70%, 57%);
+    background-color: var(--primary-color);
     transition: all 0.2s ease-in;
 }
 
@@ -464,7 +477,7 @@ body
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 24px 60px;
+    padding: 50px 50px;
     max-width: var(--max-width);
     margin: 0 auto;
 }
@@ -617,7 +630,7 @@ body
     height: 50px;
     overflow: hidden;
     background-color: #212121;
-    padding: 4px 12px;
+    padding: 3px 9px;
     border-radius: 8px;
     transition: all 0.2s ease-in;
 }
@@ -657,7 +670,7 @@ body
     transition: all 2s ease-in;
 }
 
-* 
+*
 {
     cursor: none !important;
 }
@@ -665,4 +678,231 @@ body
 *:hover
 {
     cursor: none !important;
+}
+
+/*! contact */
+
+.contact .row
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    text-align: center;
+}
+
+.contact .row .map
+{
+    flex: 1 1 45rem;
+    width: 700px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.contact .row form
+{
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+}
+
+.contact .row form h1
+{
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.12rem;
+    text-align: center;
+}
+
+.contact .row form .inputBox
+{
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    border: var(--border);
+    text-align: center;
+}
+
+.contact .row form .inputBox i
+{
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.contact .row form .inputBox input
+{
+    width: 100%;
+    padding: 1.7rem;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    text-transform: none;
+    background-color: transparent;
+    text-align: center;
+}
+
+.contact .row form .btn
+{
+    color: var(--main-color);
+    background-color: var(--accent-color);
+    font-weight: bold;
+    display: flex;
+    padding: 6px 24px;
+    justify-content: center;
+    border-radius: 999px;
+    align-items: center;
+    gap: 48px;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 200%;
+    letter-spacing: -0.16px;
+    border: 8px solid hsl(252, 70%, 57%);
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+}
+
+/*! log-in */
+
+.log-in .row
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    text-align: center;
+}
+
+.log-in .row form
+{
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+}
+
+.log-in .row form h1
+{
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.12rem;
+    text-align: center;
+}
+
+.log-in .row form .inputBox
+{
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    border: var(--border);
+    text-align: center;
+}
+
+.log-in .row form .inputBox i
+{
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.log-in .row form .inputBox input
+{
+    width: 100%;
+    padding: 1.7rem;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    text-transform: none;
+    background-color: transparent;
+    text-align: center;
+}
+
+.log-in .row form .btn
+{
+    color: var(--main-color);
+    background-color: var(--accent-color);
+    font-weight: bold;
+    display: flex;
+    padding: 6px 24px;
+    justify-content: center;
+    border-radius: 999px;
+    align-items: center;
+    gap: 48px;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 200%;
+    letter-spacing: -0.16px;
+    border: 8px solid hsl(252, 70%, 57%);
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+}
+
+/*! sign-in */
+
+.sign-up .row
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    text-align: center;
+}
+
+.sign-up .row form
+{
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+}
+
+.sign-up .row form h1
+{
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.12rem;
+    text-align: center;
+}
+
+.sign-up .row form .inputBox
+{
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    border: var(--border);
+    text-align: center;
+}
+
+.sign-up .row form .inputBox i
+{
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.sign-up .row form .inputBox input
+{
+    width: 100%;
+    padding: 1.7rem;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    text-transform: none;
+    background-color: transparent;
+    text-align: center;
+}
+
+.sign-up .row form .btn
+{
+    color: var(--main-color);
+    background-color: var(--accent-color);
+    font-weight: bold;
+    display: flex;
+    padding: 6px 24px;
+    justify-content: center;
+    border-radius: 999px;
+    align-items: center;
+    gap: 48px;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 200%;
+    letter-spacing: -0.16px;
+    border: 8px solid hsl(252, 70%, 57%);
+    transition: all 0.2s ease-in;
+    cursor: pointer;
 }
